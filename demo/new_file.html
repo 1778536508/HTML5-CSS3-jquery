@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		
+		<input type="text" id="add"/>
+		<button id="btn">点击</button>
+		
+		<script type="text/javascript">
+			$('#btn').click(function(){
+				var val = $('#add').val();
+				
+				var obj = {'keyword': val ,"offset":0,"limit":6}
+				console.log(obj)
+			})
+			
+			
+			
+			
+		</script>
+		
+		
+	</body>
+</html>

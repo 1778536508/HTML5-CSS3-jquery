@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/scss.css"/>
+		<script src="jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="box">
+			<ul class="pice">
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+			</ul>
+		</div>
+		<script type="text/javascript">
+			var uli = $('li');
+			for(var i=0;i<uli.length;i++){
+				console.log($(uli[i]).html())
+			}
+			
+			
+			
+			var str="这里是字符串aaaa这里是字符串aaaa";//原始字符串
+			var s = str;//要展示的字符串
+			if(str.length>10){
+			  s=str.substring(0,10)+"...";
+			}
+			alert(s);
+		</script>
+	</body>
+</html>

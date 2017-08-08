@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-3.1.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="swiper/css/swiper.min.css"/>
+		<script src="swiper/js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.banner{
+				width: 500px;
+				height: 200px;
+				border: 1px solid;
+				margin: 0 auto;
+			}
+			.swiper-container{
+				width: 100%;
+				height: 100%;
+			}
+			.swiper-wrapper{
+				width: 100%;
+				height: 100%;
+			}
+			.swiper-slide{
+				width: 100%;
+				height: 100%;
+				text-align: center;
+			}
+			.swiper-slide div{
+				position: relative;
+				
+			}
+			img{
+					width: 100%;
+					height: 100%;
+			}
+			span{
+				color: white;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				
+			}
+			
+			
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="banner">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div style="width: 100%;height: 100%;">
+								<span>aaaaaaaaaaaaaaaa</span>
+								<img src="img/banner.png"/>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div style="width: 100%;height: 100%;">
+								<span>bbbbbbbbbbbbbbbb</span>
+								<img src="img/banner1.jpg"/>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div style="width: 100%;height: 100%;">
+								<span>ccccccccccc</span>
+								<img src="img/Bitmap2.png"/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			
+			
+		</div>	
+		
+		<script type="text/javascript">
+			
+			//轮播图
+	    	var mySwiper = new Swiper('.swiper-container',{
+	    		//设置轮播的方向为上下轮播默认为true左右轮播
+//	  			direction: 'vertical',
+	    		//3D效果
+	    		//立体效果
+//				effect : 'cube',
+	
+				//淡入淡出效果
+				effect : 'fade',
+				
+				//3D折页效果
+//				effect : 'coverflow',
+//				slidesPerView: 2,
+//				centeredSlides: true,
+				
+				//翻页效果
+	//			effect : 'flip',
+	
+				//默认是左右的普通效果
+//				cube: {
+//				  slideShadows: true,
+//				  shadow: true,
+//				  shadowOffset: 100,
+//				  shadowScale: 0.6
+//				},
+				
+				
+				
+				//循环轮播
+				loop: true,
+				
+				//持续时间
+				speed:1000,
+				
+				//循环播放
+				autoplay: 1000,
+				
+				//触摸后轮播不停止(为false时,默认停止位true)
+				autoplayDisableOnInteraction : false
+				
+			})
+			
+			
+			
+		</script>
+		
+		
+	</body>
+</html>

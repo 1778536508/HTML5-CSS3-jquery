@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#box{
+				width: 100%;
+				border: 1px solid ;
+				overflow: hidden;
+			}
+			a{
+				float: left;
+			}
+			/*// 现代浏览器clearfix方案，不支持IE6/7*/
+			.clearfix:after {
+			    display: table;
+			    content: " ";
+			    clear: both;
+			}
+			
+			/*// 全浏览器通用的clearfix方案
+			// 引入了zoom以支持IE6/7*/
+			.clearfix:after {
+			    display: table;
+			    content: " ";
+			    clear: both;
+			}
+			.clearfix{
+			    *zoom: 1;
+			}
+			
+			/*// 全浏览器通用的clearfix方案【推荐】
+			// 引入了zoom以支持IE6/7
+			// 同时加入:before以解决现代浏览器上边距折叠的问题*/
+			.clearfix:before,
+			.clearfix:after {
+			    display: table;
+			    content: " ";
+			}
+			.clearfix:after {
+			    clear: both;
+			}
+			.clearfix{
+			    *zoom: 1;
+			}
+			ul{
+				width: 100%;
+				border: 1px solid;
+				list-style: none;
+			}
+			li{
+				float: left;
+				border: 1px solid;
+			}
+
+
+			
+			
+		</style>
+	</head>
+	<body>
+		<div id="box">
+				<a href="home.html">首页</a>		
+				<a href="list.html">分类</a>
+		</div>		
+		<ul class="clearfix">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ul>
+	</body>
+</html>

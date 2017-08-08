@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge chrome=1"/>
+	    <meta name="viewport" content="width=device-width initial-scale=1.0 minimum-scale=1.0 maximum-scale=1.0 user-scalable=no" />
+	    <meta name="format-detection" content="telephone=no email=no" />
+	    <meta name="apple-mobile-web-app-capable" content="yes"/>
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+		
+		<style type="text/css">
+			
+			*{
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				text-decoration: none;
+				box-sizing: border-box;
+				font-size: 62.5%;
+			}
+			.box{
+				width: 30rem;
+				height: 20rem;
+				border: 1px solid;
+				margin: 0 auto;
+				overflow: hidden;
+			}
+			.box ul{
+				width: 200%;
+				overflow: hidden;
+				/*margin-left: -10px;*/
+			}
+			.box ul li{
+				float: left;
+				width: 50%;
+				height: 10rem;
+			}
+			
+			
+		</style>
+	</head>
+	<body>
+		
+		<div class="box" id="box"> 
+			<ul id="pice">
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			
+			var uli = document.getElementById('pice').getElementsByTagName('li');
+			console.log(uli)
+			for(var i =0;i<uli.length;i++){
+				console.log(uli[i])
+				if(i%2==0){
+					uli[i].style.background = 'red';
+				}else{
+					uli[i].style.background = 'blue';
+				}
+			}
+			
+			
+			;(function($){
+				var box = $("#box");	
+				var pice = $('#pice');
+				var liwidth = pice.children().width();
+				var index = 0;
+				var num = pice.children().size();
+				box.swipeLeft(function(){
+					index++;
+					if(index>num-1){
+						index=0;
+					}
+					server(index);
+				}).swipeRight(function(){
+					index--;
+					if(index<0){
+						index=num-1;
+					}
+					server(index);
+				})
+				
+				
+				
+				
+				function server(index){
+					var s = index * liwidth+"px";
+					pice.css({
+						"-webkit-transform":"translateX(-"+s+")",
+						'-webkit-transition':'all 0.5s'
+					})
+				}
+				
+			})(Zepto);
+			
+			
+			
+		</script>
+		
+		
+		
+		
+		<script type="text/javascript">
+			
+			
+			for(var i = 0; i<$('.car_loc_left').length;i++){
+				$('.car_loc_left')[i].click(function(){
+					
+				})
+			}	
+			
+			
+			
+			
+			
+			
+		</script>
+		
+		
+	</body>
+</html>
+

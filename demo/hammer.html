@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	    <meta http-equiv="Content-Type" content="text/html; charset=GBK">
+        <meta name="author" content="....">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="format-detection" content="telephone=no">
+        <meta http-equiv="Expires" content="-1">
+        <meta http-equiv="Cache-Control" content="no-cache">
+        <meta http-equiv="Pragma" content="no-cache">
+		<style type="text/css">
+			#box{
+				width: 100px;
+				height: 100px;
+				background: red;
+			}
+			
+			
+			
+		</style>
+	</head>
+	<script src="js/hammer.js" type="text/javascript" charset="utf-8"></script>
+	<body>
+		
+		<div id="box"></div>
+		
+		<script type="text/javascript">
+			
+			
+			var box = document.getElementById('box');
+			alert(123)
+			box.ondragstart = function(ev) {
+				alert(123)
+			}
+			box.ondragend = function(ev) { 
+				alert(123)
+			}
+			box.onswipe = function(ev) { 
+				alert(123)
+			}
+			
+			
+			
+			
+			
+		</script>
+		
+		
+	</body>
+</html>

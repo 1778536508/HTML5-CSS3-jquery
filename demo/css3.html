@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			
+			*{
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				text-decoration: none;
+			}
+			.box{
+				width: 500px;
+				height: 500px;
+				border: 1px solid ;
+				margin: 0 auto;
+			}
+			h1{
+				text-align: center;
+				cursor: pointer;
+			}
+			h1 p{
+				width: 0px;
+				height: 1px;
+				background: red;
+				margin-left: 42%;
+				
+			}
+			
+			ul{
+				overflow: hidden;
+			}
+			
+
+			
+			
+			
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			
+			<h1>
+				首页
+				<p></p>
+			</h1>
+			<ul>
+				<li>首页</li>
+				<li>分类</li>
+				<li>技术</li>
+				<li>商城</li>
+				<li>更多</li>
+			</ul>
+			
+			
+		</div>
+		
+		<script type="text/javascript">
+			
+			var hd = document.getElementsByTagName('h1')[0];
+			var p1 = document.getElementsByTagName('p')[0];
+			hd.onmouseover = function(){
+				p1.style.width = '80px';
+				p1.style.transition = 'all 0.5s'
+			}
+			hd.onmouseout = function(){
+				p1.style.width = '0';
+				p1.style.transition = 'all 0.5s'
+			}
+			
+			
+			
+		</script>
+		
+	</body>
+</html>

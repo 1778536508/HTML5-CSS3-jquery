@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<p id="p1">点击</p>
+		<ul>
+			<li></li>
+		</ul>
+		
+		
+		<script type="text/javascript">
+			var p1 = document.getElementById('p1');
+			
+		</script>
+		<script type="text/javascript">
+			p1.onclick = function(){
+				alert(123)
+			}
+			
+			$.ajax({
+				type:"get",
+				url:"json/json.json",
+				success:function(e){
+					console.log(e);
+					for(var i in e){
+						console.log(i);
+					}
+				}
+			});
+			
+			
+			
+			
+		</script>
+		
+		
+		
+	</body>
+</html>

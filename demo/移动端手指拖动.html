@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	    <meta http-equiv="Content-Type" content="text/html; charset=GBK">
+        <meta name="author" content="....">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="format-detection" content="telephone=no">
+        <meta http-equiv="Expires" content="-1">
+        <meta http-equiv="Cache-Control" content="no-cache">
+        <meta http-equiv="Pragma" content="no-cache">
+        <script src="jquery.min.js" type="text/javascript" charset="utf-8"></script>
+        <style type="text/css">
+        	
+        	#box{
+        		width: 100px;
+        		height: 100px;
+        		background: red;
+        		position: absolute;
+        		left: 50%;
+        		top: 50%;
+        		margin-left: -50px;
+        		margin-top: -50px;
+        	}
+        	
+        </style>
+	</head>
+	<body>
+		
+		<div id="box">
+			
+		</div>
+		
+		
+		
+		
+		<script type="text/javascript">
+			$("#box").on("touchstart", function(e) {
+			    e.preventDefault();
+			    startX = e.originalEvent.changedTouches[0].pageX,
+			    startY = e.originalEvent.changedTouches[0].pageY;
+						
+			});
+			$("#box").on("touchmove", function(e) {
+			    e.preventDefault();
+			    moveEndX = e.originalEvent.changedTouches[0].pageX,
+			    moveEndY = e.originalEvent.changedTouches[0].pageY,
+			    X = moveEndX - startX,
+			    Y = moveEndY - startY;
+			    $('#box').css({
+			    	'left':X
+			    })
+						
+			});    
+			$("#box").on("touchend",function(){
+						
+			})
+			
+			
+
+			
+			
+			
+		</script>
+		
+		
+		
+	</body>
+</html>

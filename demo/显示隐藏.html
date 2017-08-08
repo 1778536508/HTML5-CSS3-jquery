@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			
+			button{
+				width: 100px;
+				height: 50px;
+				font-size: 20px;
+				font-weight: bold;
+				cursor: pointer;
+			}
+			div{
+				width: 500px;
+				height: 500px;
+				background: red;
+			}
+			
+			
+		</style>
+	</head>
+	<body>
+		
+		
+		<button>点击</button>
+		<div></div>		
+		
+		
+		<script type="text/javascript">
+			
+			var btn = document.getElementsByTagName('button')[0];
+			var oDiv = document.getElementsByTagName('div')[0];
+			var box = document.getElementsByTagName('body')[0];
+			btn.onclick = function(event){
+				 event.stopPropagation();
+				if(oDiv.style.display == 'none'){
+					oDiv.style.display = 'block';
+				}else{
+					oDiv.style.display = 'none';
+				}
+			}
+			box.onclick = function(){
+				oDiv.style.display = 'none';
+			}
+			
+			
+		</script>
+		
+		
+	</body>
+</html>

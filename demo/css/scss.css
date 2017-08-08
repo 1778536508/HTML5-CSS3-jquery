@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none; }
+
+html {
+  box-sizing: border-box; }
+
+html {
+  box-sizing: border-box; }
+
+html, body, .box {
+  width: 100%;
+  height: 100%; }
+
+.pice {
+  width: 100%; }
+  .pice li {
+    float: left;
+    width: 100px;
+    height: 50px;
+    border: 1px solid red; }
+
+/*# sourceMappingURL=scss.css.map */
